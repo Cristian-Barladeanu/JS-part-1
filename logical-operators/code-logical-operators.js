@@ -6,17 +6,34 @@ const myCountry = {
 };
 
 
-const sarahCountry = {
-    langauge: 'English',
-    population: 50000000,
-    island: true
+const myCountry2 = {
+    name : 'Portugal',
+    language: 'English',
+    population: 3000000,
+    island: false
 };
 
-if (myCountry.language === sarahCountry.langauge
-    && myCountry.population < sarahCountry.population
-    && myCountry.island === sarahCountry.island) {
-    console.log('You should live in ' + myCountry.name);
-} else {
-    console.log(myCountry.name
-        + ' does not meet your criteria :(');
+
+
+const sarahCountry = {
+    language: 'English',
+    population: 50000000,
+    island: false
+};
+
+function checkCountry (country) { 
+    if (country.language === sarahCountry.language
+        && country.population < sarahCountry.population
+        && country.island === sarahCountry.island) {
+        console.log('You should live in ' + country.name);
+    } else {
+        console.log(country.name
+            + ' does not meet your criteria :(');
+    }
 }
+
+console.log(sarahCountry.name);
+
+/*checkCountry(myCountry);
+checkCountry(myCountry2);
+*/
